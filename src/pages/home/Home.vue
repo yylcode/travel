@@ -1,9 +1,6 @@
 <template>
 	<div>
-		<div class="home">
-		 	home
-		</div>
-		<router-link to="/list" class="home">列表</router-link>
+		 hello world
 	</div>
 </template>
 <script type="text/javascript">
@@ -12,7 +9,5 @@
 	})
 </script>
 <style scoped>
-	.home{
-		font-style: 50px;
-	}
+	 
 </style>
