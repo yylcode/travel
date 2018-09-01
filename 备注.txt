@@ -8,4 +8,4 @@
    @   代表src目录
    css文件中引入其他样式  src 目录要用  ~@  表示
    @import '~@/assets/styles/iconfont/varibles.styl'
-   
+5， 如果使用轮播图  npm install vue-awesome-swiper --save  轮播图插件
