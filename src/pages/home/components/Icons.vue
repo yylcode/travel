@@ -21,9 +21,9 @@
 		name:'HomeIcons',
 		data(){
 			return {
-				swiperOption:{
-					pagination:'.swiper-pagination',
-				},
+				// swiperOption:{
+				// 	pagination:'.swiper-pagination',
+				// },
 				iconList:[
 				{
 					id:'0001',
@@ -87,9 +87,11 @@
 @import '~styles/mixins.styl'
 @import '~styles/varibles.styl'
 		 
-		.icons>>>.swiper-container
-			height:0
-			padding-bottom:50%
+	.icons>>>.swiper-container
+		height:0
+		padding-bottom:50%
+	.icons
+		margin-top:.1rem
 		.icon
 			position: relative
 			overflow:hidden
@@ -97,7 +99,7 @@
 			height:0
 			width:25%
 			padding-bottom:25%
-	
+
 			.icon-img
 				position: absolute
 				top:0
