@@ -1,6 +1,6 @@
 <template>
 	<div class="wrapper">
-		<swiper :options="swiperOption">
+		<swiper :options="swiperOption" v-if="showSwiper">
 	    <!-- slides -->
 		    <swiper-slide v-for="item of list"
 		    				:key="item.id" >
@@ -29,8 +29,12 @@
 					loop:true,
 					autoplay:true,
 					speed:2000
-
 				}
+			}
+		},
+		computed:{
+			showSwiper(){
+				return this.list.length
 			}
 		}
 	}
@@ -43,7 +47,7 @@
 	overflow:hidden
 	width:100%
 	height:0
-	padding-bottom:26.67%
+	padding-bottom:28.67%
 	background:#ccc
 	// 高度等于窗口宽度的31.25%
 	.swiper-img
