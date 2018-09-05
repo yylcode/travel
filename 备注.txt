@@ -55,4 +55,5 @@
 
 	创建分支，并从分支拉取代码
 	git pull
-	git checkout 新的分支名
+	git checkout 新的分支名‘
+	npm run dev
