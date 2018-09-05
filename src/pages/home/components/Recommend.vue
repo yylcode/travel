@@ -12,6 +12,7 @@
 					<button class="item-button">查看详情</button>
 				</div>
 			</li>
+			<li class="needmore"><p>加载更多……</p></li>
 		</ul>
 	</div>
 	
@@ -62,7 +63,11 @@
 				border-radius:.06rem
 				margin-top:.16rem
 				color:#fff
-				
+	.needmore
+		height:0;
+		padding-bottom: 12%		
+		text-align:center
+		padding-top:6%
 				
 		
 </style>

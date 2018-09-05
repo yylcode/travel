@@ -40,3 +40,19 @@
 				]
 			}
 		}
+
+10, 多页面就得去src => router => index.js 配置路由
+
+11,  提交数据，到分支，再到主分支
+	git add .
+	git commit -m  '注释信息'
+	git push
+
+	git checkout master
+	git merge  分支名   (合并分支) 
+	git push
+
+
+	创建分支，并从分支拉取代码
+	git pull
+	git checkout 新的分支名

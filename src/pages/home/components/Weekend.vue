@@ -14,6 +14,7 @@
 					 
 				</div>
 			</li>
+			<li class="needmore"><p>加载更多……</p></li>
 		</ul>
 	</div>
 	
@@ -52,6 +53,10 @@
 			color:#ccc
 			ellipsis()
 		 	
-				
+	.needmore
+		height:0;
+		padding-bottom: 12%		
+		text-align:center
+		padding-top:6%			
 		
 </style>
