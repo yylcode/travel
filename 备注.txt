@@ -9,3 +9,34 @@
    css文件中引入其他样式  src 目录要用  ~@  表示
    @import '~@/assets/styles/iconfont/varibles.styl'
 5， 如果使用轮播图  npm install vue-awesome-swiper --save  轮播图插件
+
+6，使用axios  ajax插件   npm install axios --save
+
+7, 没有后台数据支撑时，需要把模拟数据放在static目录下，这个目录是可以被外部访问的
+在 .gitignore中添加  static/mock，这样模拟数据不会被提交到线上
+
+8, 请求模拟数据的路径和实际的接口路径是不同的，上线前更改会存在一些问题，所以在 config目录下的index.js文件中  dev=>proxyTable=>中添加一下内容proxyTable: {
+        '/api':{
+            target:'http://localhost:8080',
+            pathRewrite:{
+                '^/api':'/static/mock'
+            }
+        }
+    },
+    重启服务器
+这会对路径进行一个代理，申请 /api 路径时，自动替换成 '/status/mock',上线时，把这个代理关闭即可
+
+9， json  {
+			"a":"b",
+			"a":{
+				"a":[
+					{
+						"a":"b"
+					},
+					{
+						"a":"b",
+						"b":"a"
+					}
+				]
+			}
+		}
