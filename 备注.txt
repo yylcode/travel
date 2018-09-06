@@ -57,3 +57,6 @@
 	git pull
 	git checkout 新的分支名‘
 	npm run dev
+
+12， vue只负责视图层  
+		vuex可以实现大型数据的操作

@@ -11,23 +11,28 @@
 		</div>
 		<router-link to="/city">
 			<div class="header-right">
-				{{this.city}}
+				 
+					{{this.city}}
+				 
 				<span class="iconfont arrow-icon">&#xe64a;</span>
 			</div>
 		</router-link>
 		
 	</div>
 </template>
-<script type="text/javascript">
+<script>
+	import { mapState,mapGetters } from 'vuex'
 	export default{
 		name:'HomeHeader',
-		props:{
-			city:String
+		computed:{
+			...mapState(['city']),
+			...mapGetters(['doubleCity'])
 		}
 	}
 </script>
 <style lang="stylus" scoped>
 @import '~styles/varibles.styl'
+@import '~styles/mixins.styl'
 .header
 	display:flex
 	line-height:$headerHeight
@@ -49,13 +54,14 @@
 		margin-left:.2rem
 		padding-left:.2rem
 		color:#ccc
-
 	.header-right
-		width:1.24rem
+		min-width:1.04rem
+		padding:0 .1rem
 		float:right
 		text-align:center
 		color:#fff
 		.arrow-icon
+			width:0.2rem
 			font-size:.24rem
 			margin-left:-.04rem
 	 
