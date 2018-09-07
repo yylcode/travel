@@ -29,7 +29,9 @@
 		},
 		methods:{
 			handleScroll(){
+				 
 				const top=document.documentElement.scrollTop
+				console.log(top)
 				if(top>50){
 					let opacity = top/140
 					opacity = opacity > 1 ? 1 : opacity
@@ -44,7 +46,7 @@
 		activated(){
 			window.addEventListener('scroll',this.handleScroll)
 		},
-		deacitvated(){
+		deactivated(){
 			window.removeEventListener('scroll',this.handleScroll)
 		}
 	}
@@ -67,6 +69,7 @@
 			font-size:.4rem
 	.header-fixed
 		position:fixed
+		z-index:2
 		top:0
 		left:0
 		right:0
