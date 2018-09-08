@@ -29,9 +29,9 @@
 		},
 		methods:{
 			handleScroll(){
-				 
+				
 				const top=document.documentElement.scrollTop
-				console.log(top)
+				 
 				if(top>50){
 					let opacity = top/140
 					opacity = opacity > 1 ? 1 : opacity
@@ -43,12 +43,12 @@
 			 
 			}
 		},
-		activated(){
-			window.addEventListener('scroll',this.handleScroll)
-		},
-		deactivated(){
-			window.removeEventListener('scroll',this.handleScroll)
-		}
+		mounted () {
+    		window.addEventListener('scroll', this.handleScroll)
+  		},
+  		unmounted () {
+    		window.removeEventListener('scroll', this.handleScroll)
+  		}
 	}
 </script>
 <style lang="stylus" scoped>

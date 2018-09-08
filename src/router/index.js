@@ -20,5 +20,10 @@ export default new Router({
       name:'Detail',
       component:Detail
     }
-  ]
+  ],
+  // 每次路由切换路径时，初始位置都在页面顶端
+  scrollBehavior(to,from,savedPosition){
+    return{x:0,y:0}
+
+  }
 })

@@ -60,5 +60,5 @@
 </script>
 <style lang='stylus' scoped>
 	.content
-		height:50rem
+		height:10rem
 </style>
