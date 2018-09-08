@@ -3,7 +3,7 @@
 	 	<li class="item" v-for="(item,key) of letters " :key="item"
 	 	:ref="item"
 	 	@click="handleLetterClick"
-	 	@touchstart="handleTouchStart"
+	 	@touchstart,prevent="handleTouchStart"
 	 	@touchmove="handleTouchMove"
 	 	@touchend="handleTouchEnd"
 	 	>{{item}}</li>
@@ -75,6 +75,7 @@
 		bottom:0
 		width:.4rem
 		.item
+			display:block
 			line-height:.4rem
 			text-align:center
 			color:$bgColor
